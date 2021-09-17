@@ -148,7 +148,7 @@ namespace SBT
                 if (AllProcesses.Length <= 0)
                 {
                     hasMscExited = true;
-                    this.InvokeEx(f => f.label2.Text = "My Summer Not Car Running!");
+                    this.InvokeEx(f => f.label2.Text = "My Summer Not Running!");
                     this.InvokeEx(f => f.label2.ForeColor = Color.Red);
                     if (hasMscExited && !isBackupCreated)
                     {
@@ -169,8 +169,8 @@ namespace SBT
             }
             catch (Exception c)
             {
-                MessageBox.Show("Error while cechking for msc process:" + "\n" + c.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                File.AppendAllText(logPath + logFilename, timeNow + "Error while cechking for msc process:" + c.Message + Environment.NewLine);
+                MessageBox.Show("Error while checking for msc process:" + "\n" + c.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                File.AppendAllText(logPath + logFilename, timeNow + "Error while checking for msc process:" + c.Message + Environment.NewLine);
             }
         }
 
@@ -303,11 +303,11 @@ namespace SBT
             startup_item.CheckOnClick = true;
             if (startup_item.CheckState == CheckState.Unchecked)
             {
-                SetStartup();
+                //SetStartup();
             }
             else
             {
-                RemoveStartup();
+                //RemoveStartup();
             }
         }
 
